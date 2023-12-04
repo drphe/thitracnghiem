@@ -9,3 +9,9 @@ Hiển thị tất cả câu hỏi của bộ câu hỏi, chọn từng đáp á
 2. Thi thử
 
 Lựa chọn một bộ câu hỏi ngẫu nhiên để ôn tập, sau 30 phút thì tự nộp bài.
+
+ver 0.0.01
+Phiên bản website offline
+
+ver 0.0.2
+Có thể thay đổi dữ liệu (Nhập file .json)

@@ -8,13 +8,9 @@
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <style id="option"></style>
-<div class="top" id="topcontainer">
-	<div class="left" id="title"></div>
-	<div class="right" id="clock-container"></div>
-</div>
   <div class="container">
     <div class="left-box">
-	<div class="bold" style="margin:8px;"> Chọn bộ môn</div>
+	<div class="bold" style="margin-bottom:8px;font-size:16px;"> Chọn bộ đề</div>
       <select id="mySelect" class="select"></select>
       <button class="btn2 btn-primary" id="btn-test">Bắt đầu</button>
     </div>
@@ -25,10 +21,12 @@
       <input type="radio" class="btn btn-danger" name="radio-group"  value="1" checked/>Ôn luyện (Tất cả câu hỏi) <br/>
       <input type="radio" class="btn btn-warning" name="radio-group" value="2"/> Thi thử (Đề ngẫu nhiên)<br/>
 	</form>
+	<img src="src/img/128.png" style="width:80px; height: 80px;"/>
     </div>
+	<a class="import" href="#">Tải dữ liệu mới</a> | <a class="download" href="#"> XLS -> JSON</a>
   </div>
+<input type="file" class="fileupload"/>
 <div class="quiz" id="mainquiz"></div>
-<script src="./src/data.js"></script>
 <script src="./src/main.js"></script>
 </body>
 </html>
