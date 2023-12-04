@@ -103,15 +103,6 @@ h1 {
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-    background: rgb(204, 204, 204);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    box-shadow: grey 0px 0px 0px inset;
-    border-radius: 1px;
-}
 .top {
     top: 0px;
     padding:8px;
@@ -132,4 +123,13 @@ float:right;
 .answer {
 display:none;
 margin:4px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: grey 0px 0px 0px inset;
+    border-radius: 1px;
 }

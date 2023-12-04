@@ -130,7 +130,7 @@ function cTest(data, loai = 1) {
             temp += cQuestion(s, data[s]);
         })
     } else if (loai == 2) { // ngẫu nhiên
-        const rand = getRandomSubarray(key, CONFIG.numberquestion);
+        const rand = shuffle(getRandomSubarray(key, CONFIG.numberquestion));
         let i = 1;
         keyQuestion = rand;
         rand.forEach(s => {
@@ -166,6 +166,19 @@ function getRandomSubarray(arr, size) {
         shuffled[i] = temp;
     }
     return shuffled.slice(0, size);
+}
+function shuffle (array) {
+  let currentIndex = array.length, randomIndex;
+  // Trong khi vẫn còn phần tử để sắp xếp lộn xộn
+  while (currentIndex > 0) {
+    // Chọn một phần tử ngẫu nhiên
+    randomIndex = Math.floor (Math.random () * currentIndex);
+    currentIndex--;
+    // Và hoán đổi nó với phần tử hiện tại
+    [array [currentIndex], array [randomIndex]] = [
+      array [randomIndex], array [currentIndex]];
+  }
+  return array;
 }
 // bộ đếm giờ
 function counter() {
@@ -238,3 +251,4 @@ color: red;
 color: blue;
 }`;
 }
+
