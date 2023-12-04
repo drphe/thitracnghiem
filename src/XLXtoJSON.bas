@@ -2,13 +2,19 @@ Attribute VB_Name = "XLXtoJSON"
 Sub CreateQuiz()
     Dim rng As Range
     Dim WorkRng As Range
-    Dim json As String
+    Dim json, MyValue As String
     Dim row, col As Integer
     json = "{"
     row = 1
     col = 0
     num = 0
     On Error Resume Next
+    MyValue = InputBox("Nhap so cau hoi", "Cau hoi bat dau:", 1)
+    If IsNumeric(MyValue) Then
+        num = MyValue - 1
+    Else
+        num = 0
+    End If
     Set WorkRng = Application.Selection
     Set WorkRng = Application.InputBox("Select range", "Select range", WorkRng.Address, Type:=8)
     If Err Then Exit Sub
