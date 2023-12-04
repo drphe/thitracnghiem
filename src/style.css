@@ -122,7 +122,8 @@ float:right;
 }
 #clock-container {
    font-size: 20px;
-   color: yellow;
+   color: red;
+   margin-right: 20px;
 
 }
 .answer {

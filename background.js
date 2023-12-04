@@ -7,7 +7,9 @@ chrome.runtime.onInstalled.addListener(() => {
 	console.log("Init");
 	getData();	
 })
-
+chrome.action.setTitle({
+    title: chrome.runtime.getManifest().description
+});
 async function getData(){
     var a = await fetch("./src/data.json");
     var b = await a.json();

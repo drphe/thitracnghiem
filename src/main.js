@@ -75,10 +75,10 @@
         }
         let popup = document.createElement("div");
         popup.classList.add("popup");
+	quiz.innerHTML = `<div class="right clock-container" id="clock-container"></div>`;
         popup.innerHTML = `<div class="top" id="topcontainer">
-	<div class="left" id="title">${popuptitle}</div>
-	<div class="right clock-container" id="clock-container"></div>
-</div>	<div class="popup_content"><h1>Bài thi trắc nghiệm</h1>${cTest(source, loai)}</div>`;
+	<div class="left" id="title">${popuptitle}</div></div>
+	<div class="popup_content"><h1>Bài thi trắc nghiệm</h1>${cTest(source, loai)}</div>`;
         quiz.appendChild(popup);;
         popup.innerHTML += `<div class="popup_footer">${chamthi}<button type="button" class="btn2 close"><span>&times; Đóng</span></button></div>`;
 	(loai != 1) && counter();
