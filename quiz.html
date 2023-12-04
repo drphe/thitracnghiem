@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ôn thi trắc nghiệm</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<style id="option"></style>
+<div class="top" id="topcontainer">
+	<div class="left" id="title"></div>
+	<div class="right" id="clock-container"></div>
+</div>
+  <div class="container">
+    <div class="left-box">
+	<div class="bold" style="margin:8px;"> Chọn bộ môn</div>
+      <select id="mySelect" class="select"></select>
+      <button class="btn2 btn-primary" id="btn-test">Bắt đầu</button>
+    </div>
+    <div class="right-box">
+	<form>
+	<div class="bold"> Tuỳ chọn câu hỏi</div>
+      <!---<input type="radio" class="btn btn-success" name="radio-group"  value="3" />Bộ câu hỏi <br/>--->
+      <input type="radio" class="btn btn-danger" name="radio-group"  value="1" checked/>Ôn luyện (Tất cả câu hỏi) <br/>
+      <input type="radio" class="btn btn-warning" name="radio-group" value="2"/> Thi thử (Đề ngẫu nhiên)<br/>
+	</form>
+    </div>
+  </div>
+<div class="quiz" id="mainquiz"></div>
+<script src="./src/data.js"></script>
+<script src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+  font-size:14px;
+  font-family:arial;
+}
+
+body {
+  margin:auto;
+}
+.btn{
+    min-height: 16px;
+    min-width: 16px;
+}
+.select{
+    min-height: 30px;
+    min-width: 150px;
+    margin-right: 20px;
+    margin-left:10px;
+}
+.btn2{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    justify-content: center;
+    padding: 5px 10px;
+    text-align: left;
+    vertical-align: middle;
+    min-height: 30px;
+    min-width: 40px;
+}
+.container {
+    background-color: rgb(111 90 193);
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-image: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 16px 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-box {
+  padding:8px;
+}
+
+.right-box {
+  padding:8px;
+}
+
+.btn {
+  margin:10px;
+  padding:4px;
+  cursor:pointer;
+}
+
+.bold {
+  font-weight:600;
+}
+
+.popup {
+  position:fixed;
+  left:10%;
+  height:90vh;
+  width:70%;
+  margin:auto;
+  z-index:2;
+  box-shadow:rgba(0,0,0,0.33) -3px 2px 10px 1px;
+  color:rgb(92,92,92);
+  transform:translate(60px);
+  border-radius:12px;
+  transition:all 0.2s ease-out 0s;
+  background:rgb(255,255,255);
+  overflow:auto;
+}
+.left{
+float:left;
+font-size:20px;
+}
+.popup_content {
+    padding: 0 8px 0 8px;
+  margin:15px 8px;
+}
+
+.popup_footer {
+  position:fixed;
+  right:10px;
+}
+h1 {
+	font-size:16px;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: grey 0px 0px 0px inset;
+    border-radius: 1px;
+}
+.top {
+    top: 0px;
+    padding:8px;
+    font-size:20px;
+    font-weight:700;
+    background-image: linear-gradient(90deg, #3F51B5 0%, #0770C0 100%);
+    color: rgb(255, 255, 255);
+    height: 30px;
+}
+.right{
+float:right;
+}
+#clock-container {
+   font-size: 20px;
+   color: yellow;
+
+}
+.answer {
+display:none;
+margin:4px;
+}
