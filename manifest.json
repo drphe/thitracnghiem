@@ -22,9 +22,8 @@
      "description": "Ôn thi trắc nghiệm"
     }
 },
-   "action": {
-      "default_icon": "/src/img/128.png",
-      "default_popup": "index.html",
-      "default_title": "Ôn thi trắc nghiệm"
-   }
+    "background": {
+        "service_worker": "background.js"
+    },
+   "action": {}
 }
