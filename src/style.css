@@ -110,7 +110,7 @@ h1 {
     font-weight:700;
     background-image: linear-gradient(90deg, #3F51B5 0%, #0770C0 100%);
     color: rgb(255, 255, 255);
-    height: 30px;
+    height: 20px;
 }
 .right{
 float:right;
