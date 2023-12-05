@@ -18,3 +18,6 @@ Có thể thay đổi dữ liệu (Nhập file .json)
 
 ver 0.0.5
 Thay đổi đồng hồ, sửa 1 xíu
+
+ver 0.0.6
+Cập nhật dữ liệu từ github

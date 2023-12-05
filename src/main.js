@@ -42,6 +42,10 @@
     upload.addEventListener("click", () => {
         importData();
     });
+    const update = document.querySelector(".update");
+    update.addEventListener("click", () => {
+        updateData();
+    });
     const download = document.querySelector(".download");
     download.addEventListener("click", () => {
         var link = document.createElement("a");
@@ -262,6 +266,17 @@
         document.getElementById("mainquiz").innerHTML = ""
         document.getElementById("option").innerHTML = "";
 
+    }
+    async function updateData(){
+	    var a = await fetch("https://raw.githubusercontent.com/drphe/thitracnghiem/main/src/data.json");
+    		var b = await a.json();
+		if(b){
+			chrome.storage.local.set({'data': b});
+			alert("Update data successfull!");
+                            location.reload();
+		}else {
+			alert("Failed to update data. ");
+		}
     }
     // thêm style câu trả lời
     function addAnswerStyle() {

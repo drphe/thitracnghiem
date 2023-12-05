@@ -142,7 +142,8 @@ margin:4px;
 .fileupload{
 display: none;
 }
-.download, .import {
+.update,.download, .import {
+    cursor: pointer;
 color: white;
 margin: 4px;
 }
