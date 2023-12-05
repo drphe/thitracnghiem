@@ -17,10 +17,10 @@
         optionData[key] = DATA[key].name;
     }
     //console.log(optionData)
+    await resetAll();
     const options = Object.entries(optionData).map(([key, value]) => `<option value="${key}">${value}</option>`);
     const select = document.getElementById("mySelect");
     select.innerHTML = options.join("");
-    resetAll();
 
     // nhấn ESC
     document.addEventListener("keyup", function(e) {
@@ -75,7 +75,6 @@
         }
         let popup = document.createElement("div");
         popup.classList.add("popup");
-	quiz.innerHTML = `<div class="right clock-container" id="clock-container"></div>`;
         popup.innerHTML = `<div class="top" id="topcontainer">
 	<div class="left" id="title">${popuptitle}</div></div>
 	<div class="popup_content"><h1>Bài thi trắc nghiệm</h1>${cTest(source, loai)}</div>`;
@@ -199,6 +198,7 @@
     }
     // bộ đếm giờ
     function counter() {
+	        clearInterval(countdownInterval);
         let divclock = document.querySelector(".clock-container");
         let countdownTime = CONFIG.timer * 60;
         countdownInterval = setInterval(function() {
@@ -245,12 +245,23 @@
             div.remove();
         });
     }
+	function clock(){
+	countdownInterval = setInterval(() => {
+		console.log("fad")
+		var now = new Date();
+		 var hour = now.getHours();
+		  var minute = now.getMinutes();
+			 document.querySelector(".clock-container").innerHTML = `<img src="./src/clock.png" style="height:20px; width:20px;"/>`+ hour + ":" + minute.toString().padStart(2, '0');
+		}, 1000);
+	}
     // reset
-    function resetAll() {
-        localStorage.setItem(CONFIG.localStorageID, JSON.stringify([]));
+    async function resetAll() {
+        clearInterval(countdownInterval);
+	await clock();
+        await localStorage.setItem(CONFIG.localStorageID, JSON.stringify([]));
         document.getElementById("mainquiz").innerHTML = ""
         document.getElementById("option").innerHTML = "";
-        clearInterval(countdownInterval);
+
     }
     // thêm style câu trả lời
     function addAnswerStyle() {

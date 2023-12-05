@@ -6,6 +6,10 @@
 body {
   margin:auto;
 }
+button {
+    background-color:aqua;
+    margin: 4px;
+}
 .btn{
     min-height: 16px;
     min-width: 16px;
@@ -118,7 +122,12 @@ h1 {
     height: 20px;
 }
 .right{
-float:right;
+	position: absolute;
+	top: 0px;
+	margin-left: 10px;
+	border: solid aqua 1px;
+	padding: 4px;
+	border-radius: 4px;
 }
 #clock-container {
    font-size: 20px;

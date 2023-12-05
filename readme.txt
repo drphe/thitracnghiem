@@ -15,3 +15,6 @@ Phiên bản website offline
 
 ver 0.0.2
 Có thể thay đổi dữ liệu (Nhập file .json)
+
+ver 0.0.5
+Thay đổi đồng hồ, sửa 1 xíu
