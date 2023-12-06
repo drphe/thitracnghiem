@@ -159,11 +159,8 @@
                     btn.classList.remove('wrong');
                 });
                 // check kết quả
-                let answerQ = "A";
-                if (answer == 2) answerQ = "B"
-                else if (answer == 3) answerQ = "C"
-                else if (answer == 4) answerQ = "D"
-                else if (answer == 5) answerQ = "E"
+		const DA = ["A", "B", "C", "D", "E", "F"];
+		let answerQ = DA[answer-1];
                 let btntext = mainquiz.querySelector('.' + event.target.id)
                 let keytext = mainquiz.querySelector('.key-' + key);
                 if (answerQ == source[key].A) {
@@ -243,8 +240,9 @@
     }
     // tạo câu hỏi
     function cQuestion(key, data, index = 0) {
+	const DA = ["A", "B", "C", "D", "E", "F"];
         function inputhtml(i) {
-            return data.hasOwnProperty(i) ? `<input type="radio" name = "btn-${key}" class="btn" id="btn-${key}-${i}" value="${i}"/><span class="btn-${key} btn-${key}-${i}">${data[i]}</span> <br/>` : "";
+            return data.hasOwnProperty(i) ? `<input type="radio" name = "btn-${key}" class="btn" id="btn-${key}-${i}" value="${i}"/><span class="btn-${key} btn-${key}-${i}"> ${DA[i-1]}.${data[i]}</span> <br/>` : "";
         }
         for (var input = "", j = 1; j < 6; j++) input += inputhtml(j);
         return `<form><h2 id="${key}">Câu hỏi ${index? index: key}: ${data.Q}</h2>${input}<div class="answer key-${key}"></div>	</form>`
