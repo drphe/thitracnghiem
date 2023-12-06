@@ -1,27 +1,96 @@
 (async () => {
-    // Khởi tạo
+    // ---Khởi tạo
     const CONFIG = {
         localStorageID: "answer",
         timer: 30, // thời gian bài thi
-        numberquestion: 50, // số câu hỏi trong bài thi
+        numberquestion: 30, // số câu hỏi trong bài test
+        numberquestiontest: 50, // số câu hỏi trong bài thi
     };
     var countdownInterval;
-    var DATA = {};
-    const optionData = {};
+    const optionData = {},
+        DATA = {};
     await chrome.storage.local.get(['data']).then((item) => {
         Object.assign(DATA, item.data);
-
+        console.log(DATA);
     });
-
-    for (const key in DATA) {
-        optionData[key] = DATA[key].name;
-    }
-    //console.log(optionData)
     await resetAll();
-    const options = Object.entries(optionData).map(([key, value]) => `<option value="${key}">${value}</option>`);
-    const select = document.getElementById("mySelect");
-    select.innerHTML = options.join("");
 
+    //---- thao tác nguồn dữ liệu
+    // lấy danh sách nguồn
+    for (const key in DATA) optionData[key] = DATA[key].name;
+    const optionsource = Object.entries(optionData).map(([key, value]) => `<option value="${key}">${key}</option>`);
+    const selectsource = document.getElementById("selectsource");
+    const select = document.getElementById("mySelect");
+    selectsource.innerHTML = optionsource.join("");
+    getModule();
+
+    // lấy ds module
+    function getModule() {
+        const selectedOption = selectsource.options[selectsource.selectedIndex];
+	try{
+        const value = selectedOption.value;
+        let odata = {};
+        for (const key in DATA[value]) {
+            odata[key] = DATA[value][key].name;
+        }
+        const options = Object.entries(odata).map(([key, value]) => `<option value="${key}">${value}</option>`);
+        select.innerHTML = options.join("");
+	}catch(e){}
+    }
+    // lấy dữ liệu
+    function getModuleData(full = false) {
+	CONFIG.numberquestiontest = document.getElementById("numberq").value;
+	CONFIG.timer = document.getElementById("timer").value;
+        const selectedOption1 = selectsource.options[selectsource.selectedIndex];
+        const selectedOption2 = select.options[select.selectedIndex];
+        const e = selectedOption1.value,
+            t = selectedOption2.value;
+        var source = {};
+        if (full) {
+            var j = 1;
+            source.name = e;
+            for (const k in DATA[e]) {
+                for (const [key, value] of Object.entries(DATA[e][k])) {
+		    if(key !== "name"){
+                    source[j.toString()] = value;
+                    j++;
+			}
+                }
+            }
+        } else {
+            source = Object.assign({}, DATA[e][t]);
+        }
+        return source;
+    }
+
+    // ----kiểm tra nút bấm
+    // thay đổi nguồn dữ liệu
+    document.getElementById("selectsource").addEventListener("change", () => {
+        getModule();
+    });
+    // ôn tập
+    document.getElementById("btn-start").addEventListener("click", () => {
+        const source = getModuleData()
+        showPopup(source)
+    });
+    // kiểm tra
+    document.getElementById("btn-check").addEventListener("click", () => {
+        const source = getModuleData()
+        showPopup(source, 2)
+    });
+    // thi thử
+    document.getElementById("btn-test").addEventListener("click", () => {
+        const source = getModuleData(true)
+        showPopup(source, 3)
+    });
+    // nhập dữ liệu
+    document.querySelector(".import").addEventListener("click", () => {
+        importData();
+    });
+    // cập nhật dữ liệu
+    document.querySelector(".update").addEventListener("click", () => {
+        updateData();
+    });
     // nhấn ESC
     document.addEventListener("keyup", function(e) {
         if (27 === e.keyCode) {
@@ -30,63 +99,55 @@
         }
     })
 
-    // kiểm tra nút bấm
-    const btnStart = document.getElementById("btn-test");
-    btnStart.addEventListener("click", () => {
-        const selectedOption = select.options[select.selectedIndex];
-        const value = selectedOption.value;
-        const source = Object.assign({}, DATA[value]);
-        showPopup(source)
-    });
-    const upload = document.querySelector(".import");
-    upload.addEventListener("click", () => {
-        importData();
-    });
-    const update = document.querySelector(".update");
-    update.addEventListener("click", () => {
-        updateData();
-    });
-    const download = document.querySelector(".download");
-    download.addEventListener("click", () => {
+    function hdsd() {
         var link = document.createElement("a");
-        link.href = "./src/XLXtoJSON.bas";
+        link.href = "./src/hdsd.png";
         document.body.appendChild(link);
         link.click();
         link.remove();
-    });
-    ////////////////Phần tạo popup câu hỏi, chấm thi
-    // Tạo popup
-    function showPopup(source) {
-        var name = source.name;
+    }
+
+    //-----Phần tạo popup câu hỏi, chấm thi
+    function showPopup(source, loai = 1) {
+        // khai báo
+        var name = source.name,
+            popuptitle = '',
+            chamthi = '';
+        let mainquiz = document.getElementById("mainquiz");
+        mainquiz.innerHTML = '';
         try {
             delete source.name;
         } catch (e) {}
-        const loai = document.querySelector('input[type="radio"][name="radio-group"]:checked').value;
-        let quiz = document.getElementById("mainquiz");
-        quiz.innerHTML = '';
-        let popuptitle = ''
-        let chamthi = '';
-        if (loai == 2 || loai == 3) {
-            chamthi = `  <button type="button" class="btn2 checkA"><span>&times; Chấm thi</span></button>`;
-            popuptitle = `Thi thử môn ${name}: ${CONFIG.numberquestion} câu`;
-        } else {
-            addAnswerStyle();
-            let count = 0;
-            for (const key in source) {
-                count++;
-            }
-            popuptitle = `Ôn tập môn ${name}: ${count} câu`;
+        let count = 0;
+        for (const key in source) count++;
+        switch (loai) {
+            case 1: // ôn tập
+                addAnswerStyle();
+                popuptitle = `Ôn tập ${name}: ${count} câu`;
+                chamthi = `<button type="button" class="btn2 checkA"><span>Test</span></button>`;
+                break;
+            case 2: // kiểm tra
+                counter();
+                chamthi = `<button type="button" class="btn2 checkA"><span>Kiểm tra</span></button>`;
+                popuptitle = `Kiểm tra ${name}: ${CONFIG.numberquestion} câu`;
+                break;
+            case 3:
+                counter();
+                chamthi = `  <button type="button" class="btn2 checkA"><span>Nộp bài</span></button>`;
+                popuptitle = `Thi thử ${name}: ${CONFIG.numberquestiontest}/${count} câu`;
+                break;
+            default:
         }
+        // tạo popup
         let popup = document.createElement("div");
         popup.classList.add("popup");
-        popup.innerHTML = `<div class="top" id="topcontainer">
-	<div class="left" id="title">${popuptitle}</div></div>
+        popup.innerHTML = `<div class="top" id="topcontainer"><div class="left" id="title">${popuptitle}</div></div>
 	<div class="popup_content"><h1>Bài thi trắc nghiệm</h1>${cTest(source, loai)}</div>`;
-        quiz.appendChild(popup);;
         popup.innerHTML += `<div class="popup_footer">${chamthi}<button type="button" class="btn2 close"><span>&times; Đóng</span></button></div>`;
-	(loai != 1) && counter();
-        var answers = {};
+        mainquiz.appendChild(popup);
 
+        // check answers
+        var answers = {};
         document.addEventListener("click", (event) => {
             if (event.target.tagName === "INPUT" && event.target.type === "radio" && event.target.id) {
                 const answer = event.target.value;
@@ -97,6 +158,7 @@
                     btn.classList.remove('correct');
                     btn.classList.remove('wrong');
                 });
+                // check kết quả
                 let answerQ = "A";
                 if (answer == 2) answerQ = "B"
                 else if (answer == 3) answerQ = "C"
@@ -111,7 +173,7 @@
                     btntext.classList.add('wrong');
                     keytext.innerHTML = "Đáp án bạn chọn không đúng, đáp án đúng là " + source[key].A;
                 }
-
+                // lưu kết quả
                 let t = JSON.parse(localStorage.getItem(CONFIG.localStorageID));
                 let answers = null === t ? [] : t;
                 let index = -1
@@ -132,13 +194,19 @@
                 //console.log(answers);
             }
         });
+        // nút bấm trong popup
         popup.querySelector(".close").addEventListener("click", () => {
             popup.remove(); // đóng
             resetAll();
         });
         popup.querySelector(".checkA").addEventListener("click", () => {
-            checkAnswer(); // chấm thi
-            for (const radio of mainquiz.querySelectorAll("input[type='radio']")) radio.disabled = true;
+            if (loai == 1) {
+                resetAll(false);
+                source.name = name;
+                showPopup(source, 2);
+            } else {
+                checkAnswer(); // chấm thi
+            }
         });
     }
 
@@ -146,19 +214,29 @@
     function cTest(data, loai = 1) {
         let temp = "";
         let key = Object.keys(data);
-        if (loai == 1) { // tất cả
-            key.forEach(s => {
-                temp += cQuestion(s, data[s]);
-            })
-        } else if (loai == 2) { // ngẫu nhiên
-            const rand = shuffle(getRandomSubarray(key, CONFIG.numberquestion));
-            let i = 1;
-            rand.forEach(s => {
-                temp += cQuestion(s, data[s], i);
-                i++;
-            })
-        } else {
-            alert("Mời chọn bộ câu hỏi")
+        switch (loai) {
+            case 1: // tất cả
+                key.forEach(s => {
+                    temp += cQuestion(s, data[s]);
+                });
+                break;
+            case 2: // ngẫu nhiên
+                const rand = shuffle(getRandomSubarray(key, CONFIG.numberquestion));
+                let i = 1; // số câu hỏi
+                rand.forEach(s => {
+                    temp += cQuestion(s, data[s], i);
+                    i++;
+                });
+                break;
+            case 3: // thi thử
+                const randt = shuffle(getRandomSubarray(key, CONFIG.numberquestiontest));
+                let j = 1; // số câu hỏi
+                randt.forEach(s => {
+                    temp += cQuestion(s, data[s], j);
+                    j++;
+                });
+                break;
+            default:
         }
         return temp;
 
@@ -202,18 +280,14 @@
     }
     // bộ đếm giờ
     function counter() {
-	        clearInterval(countdownInterval);
+        clearInterval(countdownInterval);
         let divclock = document.querySelector(".clock-container");
         let countdownTime = CONFIG.timer * 60;
         countdownInterval = setInterval(function() {
             // Calculate minutes and seconds
             let minutes = Math.floor(countdownTime / 60);
             let seconds = countdownTime % 60;
-
-            // Display the countdown
-            divclock.innerHTML = `<img src="./src/clock.jpg" style="height:20px; width:20px;"/> ${minutes}:${seconds.toString().padStart(2, '0')}`;
-
-            // Check if the countdown has reached zero
+            divclock.innerHTML = `<img src="./src/clock.jpg" style="height:20px; width:20px;"/>  ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             if (countdownTime === 0) {
                 clearInterval(countdownInterval);
                 checkAnswer();
@@ -223,10 +297,21 @@
             }
         }, 1000); // Update every second
     };
-
+    // đồng hồ
+    function clock() {
+        countdownInterval = setInterval(() => {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            document.querySelector(".clock-container").innerHTML = `<img src="./src/clock.png" style="height:20px; width:20px;"/>  ` + hour.toString().padStart(2, '0') + ":" + minute.toString().padStart(2, '0');
+        }, 1000);
+    }
     // chấm thi
     function checkAnswer() {
+        let mainquiz = document.getElementById("mainquiz");
+        for (const radio of mainquiz.querySelectorAll("input[type='radio']")) radio.disabled = true;
         addAnswerStyle();
+        clearInterval(countdownInterval);
         let t = JSON.parse(localStorage.getItem(CONFIG.localStorageID));
         let answers = null === t ? [] : t;
         let total = answers.length // tổng câu hỏi
@@ -239,6 +324,7 @@
     // hiển thị kết quả chấm bài
     function result(x) {
         let div = document.createElement("div");
+        div.id = "result";
         div.setAttribute("style", "max-width: 60%; min-width: 150px; padding: 0px 14px;  color: rgb(255, 255, 255); line-height: 40px; text-align: center; border-radius: 4px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999999; background: rgba(0, 0, 0, 0.7); font-size: 16px; transition: transform 0.5s ease-in 0s, opacity 0.5s ease-in 0s; opacity: 1;");
         div.innerHTML = ` Điểm số của bạn là: ${x} <br/>
   <button type="button" class="btn2 close-result">
@@ -249,40 +335,37 @@
             div.remove();
         });
     }
-	function clock(){
-	countdownInterval = setInterval(() => {
-		console.log("fad")
-		var now = new Date();
-		 var hour = now.getHours();
-		  var minute = now.getMinutes();
-			 document.querySelector(".clock-container").innerHTML = `<img src="./src/clock.png" style="height:20px; width:20px;"/>`+ hour + ":" + minute.toString().padStart(2, '0');
-		}, 1000);
-	}
     // reset
-    async function resetAll() {
+    async function resetAll(quiz = true) {
+        const result = document.querySelector("#result");
+        if (result) {
+            document.body.removeChild(result);
+        }
         clearInterval(countdownInterval);
-	await clock();
         await localStorage.setItem(CONFIG.localStorageID, JSON.stringify([]));
-        document.getElementById("mainquiz").innerHTML = ""
+        quiz && (document.getElementById("mainquiz").innerHTML = "", await clock());
         document.getElementById("option").innerHTML = "";
 
     }
-    async function updateData(){
-	    var a = await fetch("https://raw.githubusercontent.com/drphe/thitracnghiem/main/src/data.json");
-    		var b = await a.json();
-		if(b){
-			chrome.storage.local.set({'data': b});
-			alert("Update data successfull!");
-                            location.reload();
-		}else {
-			alert("Failed to update data. ");
-		}
+    // update data từ server
+    async function updateData() {
+        var a = await fetch("https://raw.githubusercontent.com/drphe/thitracnghiem/main/src/data.json");
+        var b = await a.json();
+        if (b) {
+            chrome.storage.local.set({
+                'data': b
+            });
+            alert("Update data successfull!");
+            location.reload();
+        } else {
+            alert("Failed to update data. ");
+        }
     }
     // thêm style câu trả lời
     function addAnswerStyle() {
         document.getElementById("option").innerHTML = `.answer {display:block!important;color: green;}.wrong {color: red;}.correct {color: blue;}`;
     }
-
+    // nhập dữ liệu
     function importData() {
         function isJSON(inputFile) {
             try {
@@ -309,13 +392,101 @@
                             location.reload();
                         });
                     } else {
-                        alert('JSON file is not valid.');
+                        var xl2json = new ExcelToJSON();
+                        xl2json.parseExcel(selectedFile);
                     }
                 };
                 reader.readAsText(selectedFile);
             } else {
                 alert('Please, try again.');
+                hdsd();
             }
         });
+    }
+    // chuyển excel to json
+    var ExcelToJSON = function() {
+        this.parseExcel = function(file) {
+            var dataname = removeAccents(file.name.split(".")[0]);
+            var reader = new FileReader();
+            reader.onload = async function(e) {
+                var result = e.target.result;
+                var workbook = XLSX.read(result, {
+                    type: 'binary'
+                });
+
+                var jsonData = {},
+                    oldData = {};
+                await chrome.storage.local.get(['data']).then((item) => {
+                    Object.assign(oldData, item.data);
+                });
+                workbook.SheetNames.forEach(function(sheetName) {
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    var json_object = JSON.stringify(XL_row_object);
+                    //console.log(JSON.parse(json_object));
+                    const worksheet = workbook.Sheets[sheetName];
+                    jsonData[sheetName] = {}
+                    try {
+                        jsonData[sheetName].name = worksheet["B1"].v
+                        const range = XLSX.utils.decode_range(worksheet['!ref']);
+
+                        for (let row = 2, i = 0, current = {}, num = 0; row <= range.e.r; row++, i++) {
+                            try {
+                                if (worksheet["A" + row].w && !isNaN(Number(worksheet["A" + row].w))) {
+                                    num && (jsonData[sheetName][num.toString()] = current);
+                                    current = {}, i = 0;
+                                    num++;
+                                    current.Q = worksheet["B" + row].v;
+                                    current.A = worksheet["C" + row].v;
+                                }
+                            } catch (e) {}
+                            try {
+                                if (i !== 0) {
+                                    current[i.toString()] = worksheet["B" + row].v;
+                                }
+                            } catch (e) {}
+                        }
+                    } catch (e) {}
+                });
+                oldData[dataname] = jsonData;
+                await chrome.storage.local.set({
+                    'data': oldData
+                }, function() {
+                    alert('Successfull import data.');
+                    location.reload();
+                });
+                console.log(oldData)
+            };
+            reader.onerror = function(ex) {
+                console.log(ex);
+                alert('Please try again!')
+                hdsd();
+            };
+            reader.readAsBinaryString(file);
+        };
+    };
+
+    function removeAccents(str) {
+        var AccentsMap = [
+            "aàảãáạăằẳẵắặâầẩẫấậ",
+            "AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
+            "dđ", "DĐ",
+            "eèẻẽéẹêềểễếệ",
+            "EÈẺẼÉẸÊỀỂỄẾỆ",
+            "iìỉĩíị",
+            "IÌỈĨÍỊ",
+            "oòỏõóọôồổỗốộơờởỡớợ",
+            "OÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢ",
+            "uùủũúụưừửữứự",
+            "UÙỦŨÚỤƯỪỬỮỨỰ",
+            "yỳỷỹýỵ",
+            "YỲỶỸÝỴ"
+        ];
+        for (var i = 0; i < AccentsMap.length; i++) {
+            var re = new RegExp('[' + AccentsMap[i].substr(1) + ']', 'g');
+            var char = AccentsMap[i][0];
+            str = str.replace(re, char);
+            str = str.replace(" ", "_");
+        }
+        return str;
     }
 })();

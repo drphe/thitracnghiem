@@ -21,3 +21,7 @@ Thay đổi đồng hồ, sửa 1 xíu
 
 ver 0.0.6
 Cập nhật dữ liệu từ github
+
+ver 0.0.7
+Nhập dữ liệu từ Json và xls, xlsx
+Ảnh hd
