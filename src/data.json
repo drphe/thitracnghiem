@@ -1033,6 +1033,14 @@
                 "A": "B",
                 "Q": "Một BN có giảm đồng thời TSH, T3, T4 gợi ý bệnh gì"
             },
+            "130": {
+                "1": "Viêm tuyến giáp",
+                "2": "U độc tuyến giáp đa nhân",
+                "3": "U độc tuyến giáp đơn nhân",
+                "4": "basedow",
+                "A": "D",
+                "Q": "Lồi mắt gặp trong bệnh lí tuyến giáp nào sau đây"
+            },
             "name": "KHỚP - NỘI TIẾT - A11"
         },
         "A12": {
@@ -1795,6 +1803,14 @@
                 "4": "Khi BN có mức lọc cầu thận <20ml/phút",
                 "A": "C",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn cuối"
+            },
+            "96": {
+                "1": "Mức lọc cầu thận từ 50-69 ml/phút",
+                "2": "Mức lọc cầu thận từ 60-79 ml/phút",
+                "3": "Mức lọc cầu thận từ 40-59 ml/phút",
+                "4": "Mức lọc cầu thận từ 60-89 ml/phút",
+                "A": "D",
+                "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn 2"
             },
             "name": "THẬN NỘI KHOA - AM12"
         },
@@ -3265,6 +3281,14 @@
                 "A": "B",
                 "Q": "yếu tố giúp đánh giá tiên lượng xơ gan theo thang điểm Chil-Pugh"
             },
+            "184": {
+                "1": "Nguyên nhân gây bệnh",
+                "2": "Mức độ hoạt động mô bệnh học",
+                "3": "Mức độ của sự tiến triển hoặc giai đoạn bệnh ( độ xơ hóa)",
+                "4": "Viêm gan mạn tồn tại và viêm gan mạn tiến triển",
+                "A": "D",
+                "Q": "Tình huống phân loại viêm gan mạn nào dưới đây hiện KHÔNG được sử dụng "
+            },
             "name": "NỘI TIÊU HOÁ - AM1"
         },
         "AM2": {
@@ -4259,6 +4283,14 @@
                 "4": "6 tháng",
                 "A": "A",
                 "Q": "Hội chứng Dressler ( viêm màng ngoài tim) sau nhồi máu cơ tim thường xảy ra sau nhồi máu "
+            },
+            "125": {
+                "1": "Có rale ẩm ở phổi",
+                "2": "Có gan to, tĩnh mạch cổ nổi, phản hồi gan-tĩnh mạch cổ (+)",
+                "3": "Không có triệu chứng ứ huyết phổi cũng như ngoại vi",
+                "4": "Phù chân",
+                "A": "C",
+                "Q": "Trường hợp suy tim nào sau đây được dùng thuốc chẹn Beta giao cảm"
             },
             "name": "NỘI TIM MẠCH - AM2"
         },
@@ -5855,6 +5887,14 @@
                 "A": "A",
                 "Q": "Cấu trúc nang lao điển hình gồm các thành phần sau:"
             },
+            "200": {
+                "1": "5mg/ kg thể trọng.                                           ",
+                "2": "10mg/ kg thể trọng.",
+                "3": "15 mg/kg thể trọng.                                          ",
+                "4": "20 mg/ kg thể trọng.",
+                "A": "B",
+                "Q": "Liều lượng của Rifampycin trong điều trị lao:"
+            },
             "name": "NỘI HÔ HẤP - AM3"
         },
         "AM4": {
@@ -7049,6 +7089,14 @@
                 "4": "Tất cả phương án đều đúng",
                 "A": "B",
                 "Q": "Điều trị liệt dây VII ngoại vi thể co cứng có các phương án sau đây, Chọn phương án đúng nhất"
+            },
+            "150": {
+                "1": "Viêm đa rễ dây thần kinh ( Hội chứng Guiliain-Barre), Nhiễm khuẩn thần kinh ( bệnh Lyme)",
+                "2": "Liệt bell",
+                "3": "Hội chứng góc cầu tiểu não",
+                "4": "Liệt dây thần kinh số VII ngoại vi do đái tháo đường",
+                "A": "A",
+                "Q": "Liệt dây VII kiểu ngoại vi 2 bên thường gặp trong các bệnh lí nào sau đây"
             },
             "name": "NỘI THẦN KINH - AM4"
         },
@@ -8245,6 +8293,15 @@
                 "A": "B",
                 "Q": "Thất bại điều trị sốt rét sớm là khi có biểu hiện sau:"
             },
+            "150": {
+                "1": "Từ ngày D4 đến ngày D28 bệnh nhân sốt và có KST trở lại",
+                "2": "Mật độ KST vào ngày D3 ≥ 25% mật độ KST ngày D0",
+                "3": "Còn KST vào ngày D4 và nhiệt độ nách ≥ 37,5°C",
+                "4": "Hết sốt và sạch KST sau 3 ngày điều trị cho tới ngày thứ 28",
+                "5": "                                                          THE END",
+                "A": "A",
+                "Q": "Thất bại điều trị sốt rét muộn là khi có biểu hiện sau:"
+            },
             "name": "NỘI TRUYỀN NHIỄM - AM5"
         }
     },
@@ -8522,6 +8579,14 @@
                 "4": "Đáp ứng không điều kiện",
                 "A": "B",
                 "Q": "Trong thí nghiệm thành lập phản xạ có điều kiện của pavlop thức ăn đóng vai trò là gì"
+            },
+            "35": {
+                "1": "Kích thích có điều kiện xuất hiện trước kích thích không điều kiện 1 khoảng thời gian ngắn và cố định qua các lần tập",
+                "2": "Kích thích có điều kiện và không điều kiện xuất hiện đồng thời",
+                "3": "Kích thích có điều kiện xuất hiện ngay sau khi kích thích không điều kiện 1 khoảng thời gian ngắn và cố định qua các lần tập",
+                "4": "Xuất hiện bất kì các loại kích thích các loại kích thích có và không có điều kiện trong quá trình tập",
+                "A": "A",
+                "Q": "Phản xạ có điều kiện có thể thành lập được khi"
             },
             "name": "PHẢN XẠ ĐIỀU KIỆN "
         },
@@ -9125,6 +9190,14 @@
                 "4": "TLC>FRC>TV>VC",
                 "A": "B",
                 "Q": "Câu trả lời nào sau đây là đúng về giá trị của các thể tích , dung tích hô hấp đo được ở người khở mạnh bình thường"
+            },
+            "76": {
+                "1": "Dạng bicarbonat",
+                "2": "Dạng hòa tan trong máu",
+                "3": "Dạng kết hợp với gốc imidazole trong hemoglobin",
+                "4": "Dạng kết hợp với gốc amin (-NH2) trong hemoglobin",
+                "A": "C",
+                "Q": "CO2 KHÔNG được vận chuyển trong máu dưới dạng nào sau đây"
             },
             "name": "SINH LÍ HÔ HẤP"
         },
@@ -10192,7 +10265,7 @@
                 "2": "Hem kết hợp nicotin trong môi trường acid",
                 "3": "Hem kết hợp NaCl trong môi trường acid",
                 "4": "Hem kết hợp amoniac trong môi trường acid",
-                "A": "A",
+                "A": "C",
                 "Q": "Hemin là sản phẩm được tạo thành từ"
             },
             "134": {
@@ -10229,6 +10302,15 @@
                 "4": "Fe2+ trở thành acid yếu",
                 "A": "B",
                 "Q": "methemoglobin được tạo ra khi"
+            },
+            "138": {
+                "1": "Nhiễm khuẩn mạn tính",
+                "2": "Nhiễm khuẩn cấp tính",
+                "3": "Hen phế quản",
+                "4": "Nhiễm Kí sinh trùng",
+                "5": "Leukemia thể Lympho",
+                "A": "D",
+                "Q": "Xét nghiệm công thức Bạch cầu trong máu ngoại vi của 1 bệnh nhân thấy  N 62%, E 15%, B 0%, L 21%, M 2%. Kết quả này gợi ý bệnh nhân mắc bênh gì"
             },
             "name": "SINH LÍ MÁU"
         },
@@ -10753,6 +10835,14 @@
                 "4": "Mở kênh Cl-",
                 "A": "A",
                 "Q": "Hoạt động nào sau đây của màng sau synap ứng với quá trình phát sinh điện thế hoạt động sau synap "
+            },
+            "66": {
+                "1": "Mở kênh Na+",
+                "2": "Đóng kênh Na+",
+                "3": "Mở kênh ca++",
+                "4": "Mở kênh Cl-",
+                "A": "D",
+                "Q": "Hoạt động nào sau đây của màng sau synap ứng với quá trình phát sinh điện thế ức chế sau synap "
             },
             "name": "SINH LÍ NEURON, SYNAP, PHẢN XẠ"
         },
@@ -11815,6 +11905,14 @@
                 "A": "D",
                 "Q": "Nghiệm pháp nào đánh giá nhược năng vỏ thượng thận "
             },
+            "133": {
+                "1": "aldosterol làm tăng tái hấp thu Na+ và tăng thải K+ ở ống lượn xa và phần đầu của ống góp",
+                "2": "Là hormone của tuyến vỏ thượng thận tiết ra",
+                "3": "aldosterol có hoạt tính ATPase gây hoạt hóa bơm Na+ K+ trên màng tế bào ống thận",
+                "4": "aldosterol ngăn chặn mất Na + ở đường tiêu hóa",
+                "A": "D",
+                "Q": "Điều nào sau đây là không đúng về tác dụng của aldosterol"
+            },
             "name": "SINH LÍ NỘI TIẾT"
         },
         "sinhlythan": {
@@ -12170,6 +12268,14 @@
                 "4": "Từ tế bào biểu mô có chân của màng siêu lọc",
                 "A": "B",
                 "Q": "Renin có nguồn gốc từ đâu"
+            },
+            "45": {
+                "1": "Duy trì huyết áp ổn định",
+                "2": "Duy trì lượng dịch siêu lọc ổn định cho dù huyết áp tương đối dao động",
+                "3": "Duy trì nồng độ Na+ huyết tương",
+                "4": "Duy trì hệ số lọc của tiểu cầu thận",
+                "A": "B",
+                "Q": "Cơ chế tự điều hòa mức lọc cầu thận có vai trò "
             },
             "name": "SINH LÍ THẬN"
         },
@@ -12750,6 +12856,15 @@
                 "5": "HCL được tế bào bìa tổng hợp bài tiết theo cơ chế khuếch tán, có sự tham gia của Co2, H2O, NaCl và bơm proton ( H+ K+ ATPase) và men carbonicanhydrase",
                 "A": "D",
                 "Q": "Mệnh đề nào sau đây là đúng về tổng hợp HCl ở dạ dày"
+            },
+            "73": {
+                "1": "155 mEqHCL/l dịch",
+                "2": "15 mEqHCL/l dịch",
+                "3": "55 mEqHCL/l dịch",
+                "4": "85 mEqHCL/l dịch",
+                "5": "285 mEqHCL/l dịch",
+                "A": "A",
+                "Q": "ở  điều kiện bình thường dịch bài tiết thành dạ dày có bao nhiêu HCL"
             },
             "name": "SINH LÍ TIÊU HÓA"
         },
@@ -13651,6 +13766,14 @@
                 "A": "C",
                 "Q": "Trung khu thần kinh GIAO CẢM chi phối tim nằm ở"
             },
+            "113": {
+                "1": "Thụ cảm thể áp lục là các tận cùng thần kinh, có chức năng nhận cảm với sự căng giãn",
+                "2": "Xung động theo dây thần kinh Herring đi tới các bó đơn độc",
+                "3": "Xung động từ thụ cảm thể áp lực ở quai động mạch chủ và xoang động mạch cảnh về trung khu gây hưng phấn dây thần kinh X tới tim cũng như ức chế thần kinh giao cảm chi phối trương lực mạch ngoại biên",
+                "4": "Huyết áp làm hưng phấn các thụ cảm thể áp lực ở quai động mạch chủ và xang động mạch cảnh",
+                "A": "C",
+                "Q": "Mệnh đề nào KHÔNG đúng về phản xạ tuần hoàn"
+            },
             "name": "SINH LÍ TUẦN HOÀN"
         },
         "thankinhtv": {
@@ -14046,6 +14169,14 @@
                 "4": "cả 3 loại trên",
                 "A": "D",
                 "Q": "Andrenalin có thể kết hợp với thụ cảm thể nào sau đây"
+            },
+            "50": {
+                "1": "Giảm nhu động ruột",
+                "2": "giảm nhịp tim ",
+                "3": "Co đồng tử",
+                "4": "Giãn mạch vành",
+                "A": "A",
+                "Q": "Kích thích thần kinh phó giao cảm KHÔNG có tác dụng nào sau đây"
             },
             "name": "THẦN KINH THỰC VẬT"
         }

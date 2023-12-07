@@ -411,7 +411,7 @@
                 var workbook = XLSX.read(result, {
                     type: 'binary'
                 });
-
+		console.log(workbook)
                 var jsonData = {},
                     oldData = {};
                 await chrome.storage.local.get(['data']).then((item) => {
@@ -426,8 +426,8 @@
                     try {
                         jsonData[sheetName].name = worksheet["B1"].v
                         const range = XLSX.utils.decode_range(worksheet['!ref']);
-
-                        for (let row = 2, i = 0, current = {}, num = 0; row <= range.e.r; row++, i++) {
+			var current = {}, num = 0;
+                        for (let row = 2, i = 0; row <= range.e.r+1; row++, i++) {
                             try {
                                 if (worksheet["A" + row].w && !isNaN(Number(worksheet["A" + row].w))) {
                                     num && (jsonData[sheetName][num.toString()] = current);
@@ -443,6 +443,7 @@
                                 }
                             } catch (e) {}
                         }
+			jsonData[sheetName][num.toString()] = current;
                     } catch (e) {}
                 });
                 oldData[dataname] = jsonData;

@@ -25,3 +25,7 @@ Cập nhật dữ liệu từ github
 ver 0.0.8
 Nhập dữ liệu từ Json và xls, xlsx
 Ảnh hd
+
+ver 0.0.9
+sửa lỗi nhập thiếu câu hỏi
+cập nhật dữ liệu
