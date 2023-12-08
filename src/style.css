@@ -1,6 +1,7 @@
 * {
-  font-size:14px;
-  font-family:arial;
+  font-family: "Nunito",sans-serif, arial;
+  font-size: 16px !important;
+  line-height: 1.1;
 }
 
 body {
@@ -15,6 +16,7 @@ button {
     min-width: 16px;
 }
 .select{
+border-radius: 8px;
     min-height: 30px;
     min-width: 150px;
     margin-right: 10px;

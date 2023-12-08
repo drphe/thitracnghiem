@@ -1,7 +1,7 @@
 {
   "name": "MyQuiz",
   "author": "Anh Phê",
-   "version": "0.1.1",
+   "version": "0.1.2",
   "manifest_version": 3,
   "description": "Ôn thi trắc nghiệm.",
    "icons": {
@@ -19,7 +19,7 @@
         "windows": "Alt+Q",
         "mac": "Command+Q"
       },
-     "description": "Ôn thi trắc nghiệm"
+     "description": "Ôn thi trắc nghiệm, phím tắt Alt+Q"
     }
 },
     "background": {

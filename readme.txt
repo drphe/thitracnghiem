@@ -32,3 +32,6 @@ cập nhật dữ liệu
 
 ver 0.1.0
 sửa cách hiển thị popup
+
+ver 0.1.2
+sửa lỗi nhỏ
