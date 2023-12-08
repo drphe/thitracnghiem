@@ -90,15 +90,16 @@ margin:auto;
   border-radius:12px;
   transition:all 0.2s ease-out 0s;
   background:rgb(255,255,255);
-  overflow:auto;
 }
 .left{
 float:left;
 font-size:20px;
 }
 .popup_content {
-    padding: 0 8px 0 8px;
-  margin:15px 8px;
+    padding: 0px 0px 0 16px;
+  margin:4px 8px;
+  overflow:auto;
+height: 85vh;
 }
 
 .popup_footer {
