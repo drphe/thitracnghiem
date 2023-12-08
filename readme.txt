@@ -29,3 +29,6 @@ Nhập dữ liệu từ Json và xls, xlsx
 ver 0.0.9
 sửa lỗi nhập thiếu câu hỏi
 cập nhật dữ liệu
+
+ver 0.1.0
+sửa cách hiển thị popup
