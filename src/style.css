@@ -81,12 +81,11 @@ margin:auto;
   position:fixed;
   height:100vh;
   width:70%;
-  left: 10%;
+  left: 15%;
   margin:auto;
   z-index:2;
   box-shadow:rgba(0,0,0,0.33) -3px 2px 10px 1px;
   color:rgb(92,92,92);
-  transform:translate(60px);
   border-radius:12px;
   transition:all 0.2s ease-out 0s;
   background:rgb(255,255,255);
@@ -103,7 +102,7 @@ height: 85vh;
 }
 
 .popup_footer {
-  position:fixed;
+  position:absolute;
   right:10px;
 }
 h1 {
