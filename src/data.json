@@ -8947,7 +8947,7 @@
                 "1": "VC=TV+ IRC+ FEV1",
                 "2": "VC=TV+ RV+ ERV",
                 "3": "VC=TV+ IC+ FRC",
-                "4": "VC= TV+IRC +ERV",
+                "4": "VC= TV+IRV +ERV",
                 "A": "D",
                 "Q": "Công thức nào sau đây ĐÚNG về dung tích sống (VC) liên quan tới các thông số thể tích khí lưu thông (TV), thể tích khí dự trữ hít vào (IRV), thể tích khí dự trữ thở ra (ERV), dung tích hít vào (IC), thể tích thở ra tối đa trong giây đầu tiên (FEV1) và dung tích cặn chức năng (FRC)?"
             },
@@ -12795,7 +12795,7 @@
             "65": {
                 "1": "Trypsine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin thơm",
                 "2": "Trypsine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin kiềm",
-                "3": "Chymotrysine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin tkiềm",
+                "3": "Chymotrysine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin thơm",
                 "4": "Carboxypeptidase có tác dụng cắt đứt kiên kết peptid ở phía sâu trong phân tử protein",
                 "A": "A",
                 "Q": "Điều nào sau đây KHÔNG đúng về các men tiêu hóa protein của dịch tụy"
