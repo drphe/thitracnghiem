@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<title> Ôn thi ECG online</title>
+</head>
+<style>
+    * {
+        font-size: 14px;
+        padding: 4px;
+        margin: 4px;
+    }
+
+    body {
+        display: flex;
+    }
+
+    .left {
+        float: left;
+        width: 30%
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    iframe {
+
+        border: 0px;
+    }
+</style>
+
+<body>
+    <div class="left">
+	<h3> CHỌN ID CÂU HỎI ECG</h3>
+        <input type="number" id="poll_id" value="1841" width = "50px"/>
+        <button id="ok"> Xem</button><button id="next"> Next</button>
+	<br/>
+	<a href = "https://bsgdtphcm.vn/xquang/viewopen.php" target=_blank> ÔN LUYỆN XQ </a>
+    </div>
+
+    <div class="right">
+        <div id="poll"></div>
+    </div>
+
+    <script>
+        const div = document.querySelector("#poll");
+        const input = document.querySelector("input");
+        const button = document.querySelector("#ok");
+        const button2 = document.querySelector("#next");
+        addQuestion();
+        input.addEventListener("keyup", function(t) {
+            13 === t.keyCode && (t.preventDefault(), addQuestion())
+        })
+        // Xử lý sự kiện click của button
+        button.addEventListener("click", () => {
+            addQuestion(0);
+        });
+        button2.addEventListener("click", () => {
+            addQuestion(1);
+        });
+
+        function addQuestion(ne) {
+            const id = parseInt(input.value);
+            div.innerHTML = "";
+            const iframe = document.createElement("iframe");
+            iframe.src = "https://bsgdtphcm.vn/ecg/ecg_poll2.php?poll_id=" + (ne ? id + 1 : id);
+            ne && (input.value = id + 1)
+            iframe.style.width = "800px";
+            iframe.style.height = "500px";
+            iframe.style.border = null;
+            // Chèn iframe vào web
+            div.appendChild(iframe);
+        }
+    </script>
+</body>
+
+</html>
