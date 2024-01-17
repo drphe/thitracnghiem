@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<title> Ôn thi ECG online</title>
+  <meta charset="UTF-8">
+<link rel="shortcut icon" href="../src/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+</head>
+<style>
+    * {
+        font-size: 14px;
+        padding: 4px;
+        margin: 4px;
+	overflow: hidden;
+	margin-top: 0px;
+	font-family: arial;
+    }
+    button {
+    font-size:16x!important;
+    cursor: pointer;
+    }
+    body {
+        display: flex;
+    }
+
+    .left {
+        float: left;
+        width: 320px;
+    	overflow:auto!important;
+    }
+
+    .right {
+        width: 100%;
+	padding:0px;
+    }
+
+    iframe {
+	width: 100%;
+        border: 0px;
+    }
+.bitt{
+position: absolute;
+    width:70%
+}
+</style>
+
+<body>
+    <div class="left" style="overflow:auto!important;">
+	<h3> CHỌN ID CÂU HỎI ECG</h3>
+        <input type="number" id="poll_id" value="1841" title="Dùng phim arrow để chuyển câu hỏi! " width = "50px"/><button id="ok"> Xem</button><br/>
+<div>1577-1698: ecg bệnh lý <br>1699-1822: ecg loạn nhịp <br/>1841-1911: ecg cơ bản</div><br/>
+	<a href = "https://bsgdtphcm.vn/xquang/viewopen.php" target=_blank> ÔN LUYỆN XQ </a><br/>
+<div class="poll_xq"> <div> <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040314040" target="_blank">Bất thường trục khí quản có di lệch?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040324040" target="_blank">Bất thường khí quản bên phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040334040" target="_blank">Bất thường khí quản bên trái?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040344040" target="_blank">Bất thường góc carina?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040354040" target="_blank">Tổn thương nhu mô phổi phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040364040" target="_blank">Tổn thương nhu mô phổi trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040374040" target="_blank">Bất thường bờ tim phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040384040" target="_blank">Bất thường bờ tim trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040394040" target="_blank">Bất thường bờ sườn hoành phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031304040" target="_blank">Bất thường bờ sườn hoành trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031314040" target="_blank">Bất thường góc tâm hoành phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031324040" target="_blank">Bất thường góc tâm hoành trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031334040" target="_blank">Bóng tim phải lớn</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031344040" target="_blank">Bóng tim trái lớn</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031354040" target="_blank">Bất thường trung thất trước</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031364040" target="_blank">Bất thường trung thất giữa</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031374040" target="_blank">Bất thường trung thất sau</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031384040" target="_blank">Bất thường rốn phổi phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031394040" target="_blank">Bất thường rốn phổi trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404032304040" target="_blank">Bất thường động mạch chủ lên</a></div><div>  </div></div>
+    </div>
+
+    <div class="right">
+        <div id="poll"></div>
+	<div style="display: flex;" class="bitt">
+	<button id="pre" style="width:50%;height: 30px; color: white; background-color: green;">< Xem trước </button>
+	<button id="next" style="width:50%;height: 30px; color: white; background-color: blue;"> Xem tiếp ></button>
+	</div>
+    </div>
+
+           <script src="./main.js"></script>
+</body>
+
+</html>
