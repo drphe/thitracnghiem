@@ -12,6 +12,11 @@ chrome.runtime.onInstalled.addListener(() => {
         contexts: ["action"]
     })	
     chrome.contextMenus.create({
+        title: "Ôn tập đọc ECG",
+        id: "ecgr",
+        contexts: ["action"]
+    })	
+    chrome.contextMenus.create({
         title: "Ôn luyện ECG",
         id: "ecg",
         contexts: ["action"]
@@ -30,6 +35,11 @@ chrome.contextMenus.onClicked.addListener(({
 	else if (menuItemId === 'xq') {
             chrome.tabs.create({
                 url: chrome.runtime.getURL("./xq/index.html")
+            })
+        }
+	else if (menuItemId === 'ecgr') {
+            chrome.tabs.create({
+                url: "https://bsgdtphcm.vn/api/ecg_view.php"
             })
         }
 });

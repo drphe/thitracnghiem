@@ -7929,7 +7929,7 @@
                 "2": "Có sức đề kháng tốt với ngoại cảnh",
                 "3": "Thuộc họ Flaviviridae",
                 "4": "Bộ gen là chuỗi đơn AND",
-                "A": "C",
+                "A": "A",
                 "Q": "Đặc điểm nào phù hợp với virus sởi?"
             },
             "105": {
@@ -8249,7 +8249,7 @@
                 "2": "Quinin, Artemisinin, Artesunat, Artemether, Dihydroartemisin",
                 "3": "Chloroquin, Mefloquin, Pyrimethamin, Primaquin diphosphat",
                 "4": "Mefloquin, Pyrimethamin, Quinin, Dihydroartemisin",
-                "A": "c",
+                "A": "C",
                 "Q": "Các thuốc chống sốt rét tổng hợp là:"
             },
             "145": {
@@ -8297,7 +8297,6 @@
                 "2": "Mật độ KST vào ngày D3 ≥ 25% mật độ KST ngày D0",
                 "3": "Còn KST vào ngày D4 và nhiệt độ nách ≥ 37,5°C",
                 "4": "Hết sốt và sạch KST sau 3 ngày điều trị cho tới ngày thứ 28",
-                "5": "                                                          THE END",
                 "A": "A",
                 "Q": "Thất bại điều trị sốt rét muộn là khi có biểu hiện sau:"
             },
