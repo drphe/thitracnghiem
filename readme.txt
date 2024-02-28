@@ -11,6 +11,10 @@ Hiển thị tất cả câu hỏi của bộ câu hỏi, chọn từng đáp á
 Lựa chọn một bộ câu hỏi ngẫu nhiên để ôn tập, sau 30 phút thì tự nộp bài.
 
 Update log
+ver 0.1.9
+Sửa đáp án
+thêm ôn tập ECG, XQ
+
 ver 0.1.5
 thêm tí màu mè
 thêm favico
