@@ -3133,7 +3133,7 @@
                 "2": "Hemoglobin < 70g/l",
                 "3": "Hemoglobin < 80g/l",
                 "4": "Hemoglobin < 90g/l",
-                "A": "C",
+                "A": "B",
                 "Q": "Chỉ định truyền máu trong chảy máu tiêu hóa cấp tính thường được đặt ra khi"
             },
             "166": {
@@ -3146,8 +3146,8 @@
             },
             "167": {
                 "1": "đau theo nhịp điệu",
-                "2": "đau theo chu kì nhịp điệu",
-                "3": "Thươờng kèm theo vàng da vàng mắt",
+                "2": "đau theo chu kì, nhịp điệu",
+                "3": "Thường kèm theo vàng da vàng mắt",
                 "4": "bạch cầu đa nhân trung tính cao",
                 "A": "B",
                 "Q": "loét dạ dày có đặc điểm chủ yếu là"
@@ -3449,7 +3449,7 @@
                 "3": "viêm động mạch",
                 "4": "tắc động mạch dưới đòn phải ( hoặc cánh tay phải)",
                 "A": "D",
-                "Q": "Bắt động mạch quay bên phải không đập, động mạch quay bên trái đập bình thường gặp khi:Tắc động mạch dưới đòn phải (hoặc cánh tay phải)"
+                "Q": "Bắt động mạch quay bên phải không đập, động mạch quay bên trái đập bình thường gặp khi:"
             },
             "21": {
                 "1": "Thất phải to.",
