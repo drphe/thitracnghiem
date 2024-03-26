@@ -6885,7 +6885,7 @@
                 "1": "Dựa vào triệu chứng lâm sàng thần kinh hồi phục hoàn toàn trong 1h kể từ lúc khởi phát",
                 "2": "Dựa vào hình ảnh chụp CTscaner sọ não, không thấy hình ảnh nhồi máu não",
                 "3": "Dựa vào hình ảnh MRI sọ não xung T1, T2, FLAIR, chụp mạch máu não không thấy tổn thương",
-                "4": "Dựa vào hình ảnh MRI sọ não xung khuếch tán DWI và bản đồ khuếch tán biểu kiến ABC không thấy tổn thương",
+                "4": "Dựa vào hình ảnh MRI sọ não xung khuếch tán DWI và bản đồ khuếch tán biểu kiến ADC không thấy tổn thương",
                 "A": "D",
                 "Q": "Định nghĩa cơn thiếu máu não thoáng qua có đoạn\"… có bằng chứng loại trừ thiếu máu não cấp tính\". Anh/chị hãy cho biết căn cứ  vào đây để có được bằng chứng trên"
             },
@@ -6903,7 +6903,7 @@
                 "3": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg ngay ở giai đoạn cấp",
                 "4": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg sau giai đoạn cấp",
                 "A": "C",
-                "Q": "Điều trị tăng hình ảnh trong bệnh đột quỵ  não não thể chảy máu não nhằm mục tiêu"
+                "Q": "Điều trị tăng huyết áp trong bệnh đột quỵ  não não thể chảy máu não nhằm mục tiêu"
             },
             "127": {
                 "1": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 180mmHg",
@@ -6911,7 +6911,7 @@
                 "3": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg ngay ở giai đoạn cấp",
                 "4": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg sau giai đoạn cấp",
                 "A": "D",
-                "Q": "Điều trị tăng hình ảnh trong bệnh đột quỵ  não não thể nhồi máu não  nhằm mục tiêu"
+                "Q": "Điều trị tăng huyết áp trong bệnh đột quỵ  não não thể nhồi máu não nhằm mục tiêu"
             },
             "128": {
                 "1": "Ngay sau khi khởi phát nếu không có chống chỉ định",
