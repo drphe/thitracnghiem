@@ -1041,6 +1041,86 @@
                 "A": "D",
                 "Q": "Lồi mắt gặp trong bệnh lí tuyến giáp nào sau đây"
             },
+            "131": {
+                "1": "Khớp cùng chậu",
+                "2": "Khớp liên đốt ngón tay gần bàn tay",
+                "3": "Khớp liên đốt ngón xa bàn tay",
+                "4": "Cột sống thắt lưng",
+                "A": "B",
+                "Q": "Bệnh viêm khớp dạng thấp thường tổn thương ở"
+            },
+            "132": {
+                "1": "Khớp háng",
+                "2": "Cột sống cổ",
+                "3": "Khớp gối",
+                "4": "Khớp cổ tay",
+                "A": "D",
+                "Q": "Tổn thương khớp sớm nhất trong bệnh viêm khớp dạng thấp thường ở"
+            },
+            "133": {
+                "1": "Tăng tốc độ lắng hồng cầu",
+                "2": "Tăng nồng độ RF huyết thanh",
+                "3": "Tăng thể tích hồng cầu",
+                "4": "Tăng nồng độ acid uric huyết thanh",
+                "A": "A",
+                "Q": "Đặc điểm xét nghiệm máu thường gặp trong đợt hoạt động của bệnh viêm khớp dạng thấp là?"
+            },
+            "134": {
+                "1": "Nồng độ anti-CCP huyết thanh",
+                "2": "Nồng độ anti-CCP dịch khớp",
+                "3": "Nồng độ ANA huyết thanh",
+                "4": "Nồng độ RF dịch khớp",
+                "A": "A",
+                "Q": "Xét nghiệm sử dụng chẩn đoán bệnh viêm khớp dạng thấp là"
+            },
+            "135": {
+                "1": "Loãng xương",
+                "2": "Lao khớp",
+                "3": "Viêm khớp dạng thấp",
+                "4": "Thoái hoá khớp",
+                "A": "C",
+                "Q": "Một bệnh nhân nữ, 50 tuổi, sưng, đau các khớp cổ tay, bàn ngón tay, liên đốt ngón gần bàn tay 2 bên từ 1 năm nay, không có hạt tophi, chẩn đoán phù hợp nhất là:"
+            },
+            "136": {
+                "1": "Đái tháo đường",
+                "2": "Đái tháo nhạt",
+                "3": "Basedow",
+                "4": "Hội chứng Conn",
+                "A": "C",
+                "Q": "Nhóm triệu chứng ăn nhiều, uống nhiều, đái nhiều, ra mồ hôi nhiều phù hợp nhất trong bệnh nào sau đây:"
+            },
+            "137": {
+                "1": "Cường chứng năng tuyến giáp",
+                "2": "Suy chức năng tuyến giáp",
+                "3": "Sau gắng sức",
+                "4": "Xúc động",
+                "A": "A",
+                "Q": "Triệu chứng mạn nhanh thường xuyên gặp trong nguyên nhân nào sau đây:"
+            },
+            "138": {
+                "1": "6-8 tuần",
+                "2": "6-8 tháng",
+                "3": "8-12 tháng",
+                "4": "18-24 tháng",
+                "A": "A",
+                "Q": "Thời gian điều trị giai đoạn tấn công của bệnh Basedow kéo dài"
+            },
+            "139": {
+                "1": "Sulfunylurea",
+                "2": "Thiazolidinedione",
+                "3": "Ức chế Alpha-glucosidase",
+                "4": "Metformin",
+                "A": "D",
+                "Q": "Theo khuyến cáo của hiệp hội đái thoá đường Hoa Kỳ (ADA 2014) thuốc nào được lựa chọn đầu tiên khi bắt đầu dùng thuốc cho bệnh nhân ĐTĐ typ 2?"
+            },
+            "140": {
+                "1": "Metformin",
+                "2": "Sulfunylurea",
+                "3": "Ức chế DPP-4",
+                "4": "Insulin",
+                "A": "D",
+                "Q": "Bệnh nhân ĐTĐ typ 2 đang có áp xe phổi, chỉ định thuốc hạ đường huyết nào?"
+            },
             "name": "KHỚP - NỘI TIẾT - A11"
         },
         "A12": {
@@ -1811,6 +1891,46 @@
                 "4": "Mức lọc cầu thận từ 60-89 ml/phút",
                 "A": "D",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn 2"
+            },
+            "97": {
+                "1": "Vị trí tổn thương ống thận; cầu thận trong viêm cầu thận mạn.",
+                "2": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do tăng huyết áp.",
+                "3": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do đái tháo đường",
+                "4": "Vị trí tổn thương cầu, ống thận trong viêm cầu thận, đái tháo đường và tăng huyết áp.",
+                "A": "A",
+                "Q": "Kích thước trụ có giá trị trong chẩn đoán tổn thương bệnh lý nào?"
+            },
+            "98": {
+                "1": "Trụ niệu",
+                "2": "Protein niệu",
+                "3": "Hồng cầu niệu",
+                "4": "Bạch cầu niệu",
+                "A": "B",
+                "Q": "Trong điều kiện không có sinh thiết, chỉ số nào có ý nghĩa nhất trong chẩn đoán viêm cầu thận mạn?"
+            },
+            "99": {
+                "1": "Xét nghiệm hàng tuần vẫn thấy protein niệu, 3 lần liên tiếp",
+                "2": "Xét nghiệm hàng tháng thấy protein niệu, 3 lần liên tiếp",
+                "3": "Xét ngiệm mỗi 2 tuần thấy protein niệu, 3 lần liên tiếp",
+                "4": "Xét nghiệm mỗi 10 ngày thấy protein niệu, 3 lần liên tiếp",
+                "A": "B",
+                "Q": "Đánh giá protein niệu kéo dài trong viêm cầu thận mạn dựa vào tiêu chí nào?"
+            },
+            "100": {
+                "1": "Điều trị tăng huyết áp",
+                "2": "Điều trị giảm thải protein niệu",
+                "3": "Điều trị tăng huyết áp và giảm thải protein niệu",
+                "4": "Điều trị suy tim",
+                "A": "C",
+                "Q": "Ức chế men chuyển có tác dụng gì trong bệnh viêm cầu thận?"
+            },
+            "101": {
+                "1": "Thiếu nguyên liệu tạo máu",
+                "2": "Do cơ quan tạo máu",
+                "3": "Do chảy máu và mất máu",
+                "4": "Do cơ quan tạo máu, thiếu nguyên liệu và chảy mất máu.",
+                "A": "D",
+                "Q": "Thiếu máu ở bệnh nhân suy thận mạn tính là nguyên nhân nào?"
             },
             "name": "THẬN NỘI KHOA - AM12"
         },
@@ -4290,6 +4410,30 @@
                 "4": "Phù chân",
                 "A": "C",
                 "Q": "Trường hợp suy tim nào sau đây được dùng thuốc chẹn Beta giao cảm"
+            },
+            "126": {
+                "1": "Tắc mạch phổi",
+                "2": "Sốc tim",
+                "3": "Loạn nhịp thất",
+                "4": "Hở van 2 lá cấp",
+                "A": "D",
+                "Q": "Nhồi máu cơ tim cấp không gây biến chứng sau"
+            },
+            "127": {
+                "1": "Giãn động mạch vành",
+                "2": "Thông động mạch vành",
+                "3": "Chống ngưng tập tiểu cầu",
+                "4": "Giảm đau bằng Morphin",
+                "A": "A",
+                "Q": "Biện pháp tốt nhất trị nhồi máu cơ tim cấp"
+            },
+            "128": {
+                "1": "Đoạn ST chênh lên",
+                "2": "Khoảng QT kéo dài",
+                "3": "Sóng Q",
+                "4": "Đoạn ST chênh xuống",
+                "A": "B",
+                "Q": "Biến đổi điện tim nào không dùng để chẩn đoán nhồi máu cơ tim cấp"
             },
             "name": "NỘI TIM MẠCH - AM2"
         },
