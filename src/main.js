@@ -206,18 +206,20 @@
             }
         });
     }
-
+    var isrand = false;
     //tạo bài test
     function cTest(data, loai = 1) {
         let temp = "";
         let key = Object.keys(data);
         switch (loai) {
             case 1: // tất cả
+		isrand = false;
                 key.forEach(s => {
                     temp += cQuestion(s, data[s]);
                 });
                 break;
             case 2: // ngẫu nhiên
+		isrand = true;
                 const rand = shuffle(getRandomSubarray(key, CONFIG.numberquestion));
                 let i = 1; // số câu hỏi
                 rand.forEach(s => {
@@ -226,6 +228,7 @@
                 });
                 break;
             case 3: // thi thử
+		isrand = true;
                 const randt = shuffle(getRandomSubarray(key, CONFIG.numberquestiontest));
                 let j = 1; // số câu hỏi
                 randt.forEach(s => {
@@ -241,11 +244,18 @@
     // tạo câu hỏi
     function cQuestion(key, data, index = 0) {
 	const DA = ["A", "B", "C", "D", "E", "F"];
+	var temp = [];
         function inputhtml(i) {
-            return data.hasOwnProperty(i) ? `<input type="radio" name = "btn-${key}" class="btn" id="btn-${key}-${i}" value="${i}"/><span class="btn-${key} btn-${key}-${i}"> ${DA[i-1]}.${data[i]}</span> <br/>` : "";
+            return data.hasOwnProperty(i) ? `<input type="radio" name = "btn-${key}" class="btn" id="btn-${key}-${i}" value="${i}"/><span class="btn-${key} btn-${key}-${i}">${isrand? '': DA[i-1]+'.'}${data[i]}</span> <br/>` : "";
         }
-        for (var input = "", j = 1; j < 6; j++) input += inputhtml(j);
-        return `<form><h2 id="${key}">Câu hỏi ${index? index: key}: ${data.Q}</h2>${input}<div class="answer key-${key}"></div>	</form>`
+        for (var input = "", j = 1; j < 6; j++) temp.push(inputhtml(j));
+	if(isrand){
+	for(let i = temp.length -1; i>0; i--) {
+		const j = Math.floor(Math.random()* (i+1));
+		[temp[i], temp[j]] = [temp[j], temp[i]]
+	}
+	}
+        return `<form><h2 id="${key}">Câu hỏi ${index? index: key}: ${data.Q}</h2>${temp.join("")}<div class="answer key-${key}"></div>	</form>`
     }
     // tạo bộ đề ngẫu nhiên
     function getRandomSubarray(arr, size) {
