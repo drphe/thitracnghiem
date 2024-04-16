@@ -106,7 +106,7 @@
         link.click();
         link.remove();
     }
-
+    var isrand = false;
     //-----Phần tạo popup câu hỏi, chấm thi
     function showPopup(source, loai = 1) {
         // khai báo
@@ -122,16 +122,19 @@
         for (const key in source) count++;
         switch (loai) {
             case 1: // ôn tập
+		isrand = false;
                 addAnswerStyle();
                 popuptitle = `Ôn tập ${name}: ${count} câu`;
                 chamthi = `<button type="button" class="btn2 checkA"><span>Test</span></button>`;
                 break;
             case 2: // kiểm tra
+		isrand = true;
                 counter();
                 chamthi = `<button type="button" class="btn2 checkA"><span>Kiểm tra</span></button>`;
                 popuptitle = `Kiểm tra ${name}: ${CONFIG.numberquestion} câu`;
                 break;
             case 3:
+		isrand = true;
                 counter();
                 chamthi = `  <button type="button" class="btn2 checkA"><span>Nộp bài</span></button>`;
                 popuptitle = `Thi thử ${name}: ${CONFIG.numberquestiontest}/${count} câu`;
@@ -145,7 +148,6 @@
 	<div class="popup_content"><h1>Bài thi trắc nghiệm</h1>${cTest(source, loai)}</div>`;
         popup.innerHTML += `<div class="popup_footer">${chamthi}<button type="button" class="btn2 close"><span>&times; Đóng</span></button></div>`;
         mainquiz.appendChild(popup);
-
         // check answers
         var answers = {};
         document.addEventListener("click", (event) => {
@@ -161,14 +163,17 @@
                 // check kết quả
 		const DA = ["A", "B", "C", "D", "E", "F"];
 		let answerQ = DA[answer-1];
-                let btntext = mainquiz.querySelector('.' + event.target.id)
+                let btntext = mainquiz.querySelector('.' + event.target.id);
                 let keytext = mainquiz.querySelector('.key-' + key);
                 if (answerQ == source[key].A) {
                     btntext.classList.add('correct');
                     keytext.innerHTML = "Đáp án Đúng!"
                 } else {
                     btntext.classList.add('wrong');
-                    keytext.innerHTML = "Đáp án bạn chọn không đúng, đáp án đúng là " + source[key].A;
+		    let i = DA.findIndex(s => s==source[key].A);
+                    let btntext2 = mainquiz.querySelector(`.btn-${key}-${i+1}`);
+                    btntext2.classList.add('correct');
+                    keytext.innerHTML = "Đáp án bạn chọn không đúng." + (isrand ? '': " Đáp án đúng là " +source[key].A);
                 }
                 // lưu kết quả
                 let t = JSON.parse(localStorage.getItem(CONFIG.localStorageID));
@@ -206,20 +211,17 @@
             }
         });
     }
-    var isrand = false;
     //tạo bài test
     function cTest(data, loai = 1) {
         let temp = "";
         let key = Object.keys(data);
         switch (loai) {
             case 1: // tất cả
-		isrand = false;
                 key.forEach(s => {
                     temp += cQuestion(s, data[s]);
                 });
                 break;
             case 2: // ngẫu nhiên
-		isrand = true;
                 const rand = shuffle(getRandomSubarray(key, CONFIG.numberquestion));
                 let i = 1; // số câu hỏi
                 rand.forEach(s => {
@@ -228,7 +230,6 @@
                 });
                 break;
             case 3: // thi thử
-		isrand = true;
                 const randt = shuffle(getRandomSubarray(key, CONFIG.numberquestiontest));
                 let j = 1; // số câu hỏi
                 randt.forEach(s => {

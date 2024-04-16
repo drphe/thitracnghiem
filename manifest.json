@@ -1,7 +1,7 @@
 {
   "name": "MyQuiz",
   "author": "Anh Phê",
-   "version": "0.1.11",
+   "version": "0.1.12",
   "manifest_version": 3,
   "description": "Ôn thi trắc nghiệm.\nPhím tắt Alt+Q",
    "icons": {
