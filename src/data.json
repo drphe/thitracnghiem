@@ -310,7 +310,7 @@
                 "2": "Lách to.",
                 "3": "Tốc độ máu lắng tăng",
                 "4": "Sốt nhẹ",
-                "A": "B",
+                "A": "A",
                 "Q": "Trong đợt cấp tính của viêm khớp dạng thấp, các triệu chứng sau đây có thể xuất hiện, loại trừ:"
             },
             "40": {
@@ -1861,14 +1861,6 @@
                 "Q": "Loại dịch nào được khuyến cáo sử dụng cho BN suy thận cấp"
             },
             "93": {
-                "1": "Dịch cao phân tử",
-                "2": "Các dung dịch muối, đường đẳng trường",
-                "3": "Các dung dịch muối, đường ưu trường",
-                "4": "các chế phẩm máu",
-                "A": "B",
-                "Q": "Loại dịch nào được khuyến cáo sử dụng cho BN suy thận cấp"
-            },
-            "94": {
                 "1": "Mức lọc cầu thận từ 30-59 ml/phút",
                 "2": "Mức lọc cầu thận từ 40-59 ml/phút",
                 "3": "Mức lọc cầu thận từ 21-40 ml/phút",
@@ -1876,7 +1868,7 @@
                 "A": "A",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn 3"
             },
-            "95": {
+            "94": {
                 "1": "Khi BN có mức lọc cầu thận <5ml/phút",
                 "2": "Khi BN có mức lọc cầu thận <10ml/phút",
                 "3": "Khi BN có mức lọc cầu thận <15ml/phút",
@@ -1884,7 +1876,7 @@
                 "A": "C",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn cuối"
             },
-            "96": {
+            "95": {
                 "1": "Mức lọc cầu thận từ 50-69 ml/phút",
                 "2": "Mức lọc cầu thận từ 60-79 ml/phút",
                 "3": "Mức lọc cầu thận từ 40-59 ml/phút",
@@ -1892,7 +1884,7 @@
                 "A": "D",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn 2"
             },
-            "97": {
+            "96": {
                 "1": "Vị trí tổn thương ống thận; cầu thận trong viêm cầu thận mạn.",
                 "2": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do tăng huyết áp.",
                 "3": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do đái tháo đường",
@@ -1900,7 +1892,7 @@
                 "A": "A",
                 "Q": "Kích thước trụ có giá trị trong chẩn đoán tổn thương bệnh lý nào?"
             },
-            "98": {
+            "97": {
                 "1": "Trụ niệu",
                 "2": "Protein niệu",
                 "3": "Hồng cầu niệu",
@@ -1908,7 +1900,7 @@
                 "A": "B",
                 "Q": "Trong điều kiện không có sinh thiết, chỉ số nào có ý nghĩa nhất trong chẩn đoán viêm cầu thận mạn?"
             },
-            "99": {
+            "98": {
                 "1": "Xét nghiệm hàng tuần vẫn thấy protein niệu, 3 lần liên tiếp",
                 "2": "Xét nghiệm hàng tháng thấy protein niệu, 3 lần liên tiếp",
                 "3": "Xét ngiệm mỗi 2 tuần thấy protein niệu, 3 lần liên tiếp",
@@ -1916,7 +1908,7 @@
                 "A": "B",
                 "Q": "Đánh giá protein niệu kéo dài trong viêm cầu thận mạn dựa vào tiêu chí nào?"
             },
-            "100": {
+            "99": {
                 "1": "Điều trị tăng huyết áp",
                 "2": "Điều trị giảm thải protein niệu",
                 "3": "Điều trị tăng huyết áp và giảm thải protein niệu",
@@ -1924,7 +1916,7 @@
                 "A": "C",
                 "Q": "Ức chế men chuyển có tác dụng gì trong bệnh viêm cầu thận?"
             },
-            "101": {
+            "100": {
                 "1": "Thiếu nguyên liệu tạo máu",
                 "2": "Do cơ quan tạo máu",
                 "3": "Do chảy máu và mất máu",
