@@ -6453,7 +6453,7 @@
                 "1": "Chống viêm giảm đau Steriod, Non-Steriod, giãn cơ vân, kháng cholinesterase, tái tạo bao Myelin, hỗ trợ tuần hoàn, chống gốc tự do.",
                 "2": "Chống viêm giảm đau Steriod, Non-Steriod, giãn cơ trơn, kháng cholinesterase, tái tạo bao Myelin, hỗ trợ tuần hoàn, chống gốc tự do.",
                 "3": "Cả ba phương án",
-                "4": "Chống viêm giảm đau Steriod, Non-Steriod, giãn cơ vân, kháng cholinesterase, tái tạo bao Myelin, hỗ trợ tuần hoàn, chống gốc tự do.",
+                "4": "Chống viêm giảm đau Steriod, Non-Steriod, giãn cơ vân, kháng hệ cholinergic , tái tạo bao Myelin, hỗ trợ tuần hoàn, chống gốc tự do.",
                 "A": "A",
                 "Q": "Thuốc là một phần trong điều trị thoát vị đĩa đệm cột sống thắt lưng. Các nhóm thuốc nào dưới đây được áp dụng?"
             },
@@ -9195,7 +9195,7 @@
                 "3": "IC= RV+ IRV",
                 "4": "TLC= VC+ RV",
                 "A": "D",
-                "Q": "Điều nào sau đây là KHÔNG đúng về các dung tích hô hấp theo công thức liên quan với thể tích khí cặn (RV), thể tích khí dự trữ hít vào (IRV), thể tích khí dự trữ thở ra (ERV),thể tích khí lưu thông (TV), dung tích sống (VC), dung tích cặn chức năng (FRc), dung tích hít vào (IC) và tổng dung lượng phổi (TLC)?"
+                "Q": "Điều nào sau đây là đúng về các dung tích hô hấp theo công thức liên quan với thể tích khí cặn (RV), thể tích khí dự trữ hít vào (IRV), thể tích khí dự trữ thở ra (ERV),thể tích khí lưu thông (TV), dung tích sống (VC), dung tích cặn chức năng (FRc), dung tích hít vào (IC) và tổng dung lượng phổi (TLC)?"
             },
             "60": {
                 "1": "Là lượng khí tối đa phổi huy động được trong một lần hít vào ",
